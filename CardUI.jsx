@@ -16,8 +16,8 @@ const Card = props =>{
              </div>
              <div className="card-body text-dark">
                  <h4 className="card-title">{props.title}</h4>
-                 <p className="card-text text-secondary">Type : {props.type} <p className="p2">Duration : 1 Hour
-    <p>Question: 100 </p><p>Practice Point: <a href="./Login">Login</a></p></p>
+                 <p className="card-text text-secondary">Type : {props.type} <p className="p2">Duration : {props.duration}
+    <p>Question: {props.noq} </p>{props.isLoginRequired &&<p>Practice Point: <a href="./Login">Login</a></p>}</p>
                  </p>
                                
                  <a href="#" className="btn btn-outline-success ">Start Test</a>

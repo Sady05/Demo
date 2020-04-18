@@ -18,19 +18,36 @@ class Cards extends Component {
        this.state ={
         data : [{
           title : 'SSC CHSL',
-          imgsrc: {img1}
+          imgsrc: require('./SSC2.jpg'),
+          isLoginRequired: "true",
+          noq : 100,
+          type : 'MCQ',
+          duration : '1 hour'
           
         },{
           title : 'BANK PO',
-          imgsrc : {img2}
+          imgsrc : require('./BANK PO.png'),
+          noq : 150,
+          type : 'MCQ',
+          isLoginRequired: "true",
+          duration : '1.5 hour'
         },
         {
           title : 'RRB',
-          imgsrc : {img3}
+          imgsrc : require('./RRB.png'),
+          noq : '200',
+          type : 'MCQ',
+          isLoginRequired: "true",
+          duration : '2 hour'
+          
         },
         {
           title : 'SSC',
-          imgsrc : {img1}
+          imgsrc : require('./SSC2.jpg'),
+          noq : 100,
+          type : 'MCQ',
+          isLoginRequired: "true",
+          duration : '! hour'
         }
         ]
       };
@@ -40,26 +57,33 @@ componentDidMount(){}
   render(){
     
     return(
+      
+      
 
       <div className="container-fluid d-flex justify-content-centre">
         <div className="row">
-          <div className="col-md-3">
-          {this.state.data.map((item, index) => {
+        {this.state.data.map((item, index) => {
             
             return(
-              
-                <Card imgsrc={item.title}/>
+          <div className="col-md-3">
+                <Card {...item}/>
+          </div>
+         
                 
             )
-          })
            
-            
-  }
-         </div>
+                
+          })
          
-      </div>
-      </div>
-            )
+            
+           }
+       </div>
+          </div>
+    
+        
+     
+      
+        )     
             
     
     
