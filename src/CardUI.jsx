@@ -1,7 +1,7 @@
 import React from 'react';
-import SSC2 from './SSC2.jpg';
+//import SSC2 from './SSC2.jpg';
 import "./Card-style.css";
-import Login from "./Login.js";
+//import login from "./login.jsx";
 import {Container} from 'react-bootstrap';
 
 
@@ -17,7 +17,7 @@ const Card = props =>{
              <div className="card-body text-dark">
                  <h4 className="card-title">{props.title}</h4>
                  <p className="card-text text-secondary">Type : {props.type} <p className="p2">Duration : {props.duration}
-    <p>Question: {props.noq} </p>{props.isLoginRequired &&<p>Practice Point: <a href="./Login">Login</a></p>}</p>
+    <p>Question: {props.noq} </p>{props.isLoginRequired &&<p>Practice Point: <a href="./Login.jsx">Login</a></p>}</p>
                  </p>
                                
                  <a href="#" className="btn btn-outline-success ">Start Test</a>

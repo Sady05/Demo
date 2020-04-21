@@ -7,19 +7,33 @@ import {
 import "./App.css";
 import Card from './CardUI';
 import Cards from './Cards';
+import Sign_in from './Sign_in.jsx';
+import Register from './Register';
 
 class App extends Component  {
+  constructor(props){
+    super(props);
+    this.state={
+      isLoginActive: true,
+    }
+  }
    
   render(){
+    const {isLoginActive} = this.state;
   return (
-    <div>
-     <h1 className="h1"> MoveUp.com  <h5><a href="/" className="login">Login</a></h5></h1>
+   <div className="App">
+     <div className="Sign_in">
+       <div className="container">
+       <div>
+         {isLoginActive && <Sign_in containerRef={(ref)=> this.current= ref}/>}
+         {!isLoginActive && <Register containerRef={(ref)=> this.current= ref}/>}
+     <h1 className="h1"> MoveUp.com  <h5><a href={Sign_in} className="login">Login</a></h5></h1>
      <Cards />
-
-        
-        
        
     </div>
+       </div>
+     </div>
+   </div>
 
    
   );

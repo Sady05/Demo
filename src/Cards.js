@@ -55,7 +55,7 @@ class Cards extends Component {
     }
 componentDidMount(){}
   render(){
-    
+    const {isLoginRequired} = this.state;
     return(
       
       

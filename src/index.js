@@ -4,11 +4,13 @@ import './index.css';
 import App from './App';
 //import Cards from "./Cards";
 import * as serviceWorker from './serviceWorker';
-//import Login from "./Login"
+import Sign_in from "./Sign_in";
+import Register from "./Register";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
+   
     <App />
   </React.StrictMode>,
   document.getElementById('root')
