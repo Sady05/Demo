@@ -1,6 +1,8 @@
 import React from 'react';
 import LoginImg  from './loginimg.png';
 import "./Sign_in.css";
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+
 
 
 export default class Sign_in extends React.Component{
@@ -9,7 +11,11 @@ export default class Sign_in extends React.Component{
     }
 
     render(){
-        return (<div className="base-container">
+        return (
+            <div>
+   
+        
+        <div className="base-container" ref={this.props.containerRef}>
             <div className="header">login</div>
             <div className="content">
                 <div className="image">
@@ -30,7 +36,9 @@ export default class Sign_in extends React.Component{
                 <button type="button" className="btn">Login</button>
             </div>
         </div>
+       
         
+        </div>
        ); 
     }
 }
